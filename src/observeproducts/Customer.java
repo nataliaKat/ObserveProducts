@@ -9,11 +9,19 @@ package observeproducts;
  *
  * @author kat26
  */
-public class Customer1 implements Observer{
+public class Customer implements Observer{
+    
+    private String name;
+
+    public Customer(String name) {
+        this.name = name;
+    }
     
     @Override
     public void update(Product p) {
-        System.out.println("Customer 1 " + p + "was updated");
+        System.out.println(name + " " + p + " was updated");
     }
+
+  
     
 }
