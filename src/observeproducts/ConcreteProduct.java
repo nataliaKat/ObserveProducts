@@ -23,11 +23,11 @@ public class ConcreteProduct {
         return state;
     }
 
-    public void updatedState(boolean updated) {
-        if (updated) {
+    public void updateState(Product state) {
+        
             this.state = state;
             notifyObs();
-        }
+        
     }
 
     public void notifyObs() {

@@ -13,7 +13,7 @@ public class Customer1 implements Observer{
     
     @Override
     public void update(Product p) {
-        System.out.println("Customer 1 " + p + " was updated");
+        System.out.println("Customer 1 " + p + "was updated");
     }
     
 }

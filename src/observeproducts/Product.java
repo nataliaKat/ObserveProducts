@@ -20,7 +20,7 @@ public class Product extends ConcreteProduct {
     protected String color;
     protected String size;
     
-    public Product(Product p, String name, int quantity, String color, String size) {
+    public Product(String name, int quantity, String color, String size) {
         
         this.name = name;
         this.quantity = quantity;
@@ -34,14 +34,14 @@ public class Product extends ConcreteProduct {
     public void setName(String name) {
         if (!this.name.equals(name)) {
             this.name = name;
-            updatedState(true);
+            updateState(this);
         }
     }
     
     public void setQuantity(int quantity) {
         if (this.quantity != quantity) {
             this.quantity = quantity;
-            updatedState(true);
+            updateState(this);
             
         }
     }
@@ -49,7 +49,7 @@ public class Product extends ConcreteProduct {
     public void setColor(String color) {
         if (!this.color.equals(color)) {
             this.color = color;
-            updatedState(true);
+            updateState(this);
             
         }
     }
@@ -57,7 +57,7 @@ public class Product extends ConcreteProduct {
     public void setSize(String size) {
         if (!this.size.equals(size)) {
             this.size = size;
-            updatedState(true);
+            updateState(this);
         }
         
     }
