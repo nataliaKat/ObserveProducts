@@ -5,22 +5,58 @@
  */
 package observeproducts;
 
+import java.util.Objects;
+
 /**
  *
  * @author kat26
  */
-public class Customer implements Observer{
+public class Customer {
     
     private String name;
 
     public Customer(String name) {
         this.name = name;
     }
-    
-    @Override
-    public void update(Product p) {
-        System.out.println(name + " " + p + " was updated");
+
+    public String getName() {
+        return name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.name);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Customer other = (Customer) obj;
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" + "name=" + name + '}';
+    }
+    
 
   
     

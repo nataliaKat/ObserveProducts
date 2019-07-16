@@ -5,15 +5,13 @@
  */
 package observeproducts;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /**
  *
  * @author kat26
  */
-public class Product extends ConcreteProduct {
+public class Product extends ConcreteProduct{
     
     protected String name;
     protected int quantity;
@@ -29,6 +27,22 @@ public class Product extends ConcreteProduct {
     }
     
     public Product() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getSize() {
+        return size;
     }
     
     public void setName(String name) {
